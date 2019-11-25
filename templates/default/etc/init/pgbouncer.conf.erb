@@ -15,5 +15,7 @@ end script
 expect daemon
 respawn
 
+limit nofile <%= @file_soft_limit %> <%= @file_hard_limit %>
+
 exec start-stop-daemon --start --quiet --pidfile $RUNDIR/$JOB.pid --chuid $USER \
 		--exec $DAEMON -- $DAEMON_OPTS || true

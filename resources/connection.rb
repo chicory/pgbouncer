@@ -48,3 +48,6 @@ attribute :connect_query, :kind_of => String
 attribute :tcp_keepalive, :kind_of => Integer
 attribute :tcp_keepidle, :kind_of => Integer
 attribute :tcp_keepintvl, :kind_of => Integer
+
+attribute :file_soft_limit, :kind_of => Integer, :default => 1024
+attribute :file_hard_limit, :kind_of => Integer, :default => 4096
